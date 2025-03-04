@@ -4,24 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Computer Science XI - Home</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="global.css">
 </head>
 <body>
-    <nav>
-        <ul>
+    <nav class="navbar">
+        <div class="logo">
+            <span>CS XI</span>
+        </div>
+        <ul class="nav-links">
             <li><a href="index.html">Home</a></li>
             <li><a href="courses.html">Courses</a></li>
             <li><a href="c_programming.html">C Programming</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
         </ul>
     </nav>
     
     <header style="text-align: center;">
-        <h1>Welcome to Computer Science XI</h1>
+        <h1>Welcome to Computer Notes</h1>
     </header>
     
     <section>
-        <h1>About Computer Science XI</h1>
-        <p style="text-align: justify;">Welcome to the Grade XI Computer Science program, where you'll delve into the dynamic world of technology and computing. This course is designed to provide a strong foundation in programming languages, data structures, algorithms, web development, and database management. With a focus on practical skills and real-world applications, you'll learn to solve complex problems and create innovative solutions. Join us and embark on a transformative journey that will prepare you for a future in the rapidly evolving tech industry.</p>
+        <h1>About Computer Notes</h1>
+        <p class="paragraph">Welcome to the Grade XI Computer Science program, where you'll delve into the dynamic world of technology and computing. This course is designed to provide a strong foundation in programming languages, data structures, algorithms, web development, and database management. With a focus on practical skills and real-world applications, you'll learn to solve complex problems and create innovative solutions. Join us and embark on a transformative journey that will prepare you for a future in the rapidly evolving tech industry.</p>
     </section>
 
     <section>
@@ -40,16 +45,17 @@
     <section>
         <h2>Form</h2>
         <form id="reportForm">
-            <label>Name:</label>
+            <label for="name">Name:</label>
             <input type="text" id="name" name="name" placeholder="Enter your name" required>
             
-            <label>Email:</label>
+            <label for="email">Email:</label>
             <input type="email" id="email" name="email" placeholder="Enter your E-mail" required>
             
-            <label>Message:</label>
+            <label for="message">Message:</label>
             <textarea id="message" name="message" placeholder="Enter your message (Optional)" required></textarea>
             
-            <button type="button">Submit</button>
+            <button type="submit">Submit</button>
         </form>
+    </section>
 </body>
 </html>

@@ -68,7 +68,7 @@ section {
     margin: 20px auto;
     border-radius: 8px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-    max-width: 1350px; /* Increased max-width to make the boxes wider */
+    max-width: 1000px; /* Increased max-width to make the boxes wider */
     text-align: left;
 }
 
@@ -113,4 +113,66 @@ section {
 .course-description {
     margin-top: 10px;
     color: #555;
+}
+
+form {
+    background: #FFFFFF; /* White */
+    padding: 20px;
+    margin: 20px auto;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px gray;
+    max-width: 600px;
+    text-align: left;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+form label {
+    display: block;
+    font-weight: bold;
+    margin: 10px 0 5px;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    resize: none; /* Prevent resizing of text area */
+}
+
+form button {
+    background: #1E3A8A; /* Dark Blue */
+    color: #FFFFFF; /* White */
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+form button:hover {
+    background-color: #0EA5E9; /* Teal */
+}
+
+a {
+    text-decoration: none;
+    color: #111827; /* Black */
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: #0EA5E9; /* Teal */
+}
+
+a:hover::after {
+    content: " (" attr(href) ")";
+    font-size: 0.8em;
+    color: gray;
+}
+
+ol li {
+    margin-bottom: 10px;
 }
