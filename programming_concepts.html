@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programming Concepts and Logic (C-Programming)</title>
+    <link rel="stylesheet" href="global.css">
+    <style>
+        h1 {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <span>CS XI</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="courses.html">Courses</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <h1>Chapter-5 <br>Programming Concepts and Logic (C-Programming)</h1>
+        <section>
+            <section>
+                <strong>Introduction to Programming Concepts:</strong>
+                <p>Programming concepts form the foundation of writing software, enabling computers to execute tasks through structured instructions. In C programming, a high-level, procedural language developed by Dennis Ritchie in 1972, these concepts translate human logic into machine-executable code. Key ideas include variables for data storage, control structures for decision-making, and functions for modularity. Programs follow a sequence—input, process, output—solving problems like calculations or data sorting. C’s simplicity and efficiency make it ideal for system programming, like operating systems, while teaching core logic applicable to other languages. Understanding these concepts builds problem-solving skills, requiring clear syntax and logical flow, essential for creating reliable, scalable software used in applications from embedded systems to desktop tools.</p>
+            </section>
+            <section>
+                <strong>Basics of C Programming:</strong>
+                <p>C programming starts with a basic structure: a `main()` function where execution begins, enclosed in braces. It uses headers like `<stdio.h>` for input/output functions, such as `printf()` to display text or `scanf()` for user input. Programs are written in plain text, compiled into machine code using compilers like GCC. C is case-sensitive, requiring precise syntax—semicolons end statements, and comments (`//` or `/* */`) explain code. Variables, declared with types like `int` or `float`, store data, while operators (`+`, `-`, `*`) perform arithmetic. A simple C program might calculate a sum, printing results to the console. Its structured approach teaches foundational logic, influencing modern languages and underpinning software development universally.</p>
+            </section>
+            <section>
+                <strong>Variables and Data Types:</strong>
+                <p>In C programming, variables are named memory locations that store data, declared with data types defining their nature and size. Common types include `int` for integers (e.g., 42), `float` for decimals (e.g., 3.14), `char` for single characters (e.g., 'A'), and `double` for larger floating-point numbers. Declaration like `int age = 25;` assigns a value, while scope—local or global—determines accessibility. C’s type system ensures efficient memory use, as `int` might take 4 bytes, `char` just 1. Variables hold inputs or results, manipulated by operations like addition or comparison. Understanding data types and variables is key to managing data flow, forming the bedrock of logical programming in C and beyond.</p>
+            </section>
+            <section>
+                <strong>Control Structures:</strong>
+                <p>Control structures in C programming direct the flow of execution based on conditions or repetition, essential for decision-making and looping. Conditional statements like `if`, `else if`, and `else` test expressions—e.g., `if (x > 0)`—executing code blocks accordingly. The `switch` statement handles multiple cases, like selecting menu options. Loops include `for` for fixed iterations (e.g., `for (i=0; i<5; i++)`), `while` for condition-based repetition, and `do-while` for at least one execution. These structures, using relational (`>`, `==`) and logical operators (`&&`, `||`), solve problems like sorting or counting. By controlling program logic, they enable C to handle complex tasks efficiently, forming the core of procedural programming’s problem-solving power.</p>
+            </section>
+            <section>
+                <strong>Functions in C:</strong>
+                <p>Functions in C programming are reusable code blocks that perform specific tasks, enhancing modularity and readability. Defined with a return type (e.g., `int`), name, and parameters—like `int add(int a, int b)`—they execute when called, returning values or performing actions. The `main()` function initiates programs, but custom functions like `add()` simplify repeated operations, reducing redundancy. Parameters pass data, while `return` sends results back, as in `return a + b;`. Functions can be declared in headers and defined separately, supporting large projects. Libraries like `<math.h>` provide pre-built functions (e.g., `sqrt()`). Mastering functions teaches logical decomposition, a key concept for structuring efficient, maintainable C programs used in diverse applications.</p>
+            </section>
+            <section>
+                <strong>Arrays and Strings:</strong>
+                <p>Arrays in C programming store multiple values of the same type under one name, like `int numbers[5] = {1, 2, 3, 4, 5};`, accessed by indices (0 to 4). They enable efficient data handling, such as storing test scores, looped through with `for`. Strings, a special array of `char` terminated by `\0` (e.g., `char name[] = "John";`), represent text, manipulated with functions like `strlen()` from `<string.h>`. Arrays support operations like sorting or searching, foundational to algorithms. Their fixed size requires careful memory planning, teaching data organization. Arrays and strings bridge simple variables to complex structures, vital for logical programming tasks in C, from data storage to text processing.</p>
+            </section>
+            <section>
+                <strong>Pointers:</strong>
+                <p>Pointers in C programming are variables that store memory addresses, offering direct access to data locations. Declared with `*`, like `int *ptr = &x;`, they reference a variable’s address (`&`), enabling dynamic manipulation—`*ptr = 10` changes `x`. Pointers support memory allocation with `malloc()`, critical for flexible structures like linked lists. They’re tricky, risking errors like dereferencing null pointers, but powerful for passing data to functions efficiently (call-by-reference). Arithmetic, like `ptr++`, navigates arrays, linking pointers to memory management. Understanding pointers unlocks C’s low-level capabilities, used in system programming and OS development, teaching logic about memory, addresses, and resource control fundamental to advanced programming concepts.</p>
+            </section>
+            <section>
+                <strong>Program Development and Logic:</strong>
+                <p>Program development in C involves steps to solve problems logically: understanding requirements, designing algorithms, coding, testing, and debugging. Algorithms—step-by-step plans—like sorting numbers, use pseudocode or flowcharts before C implementation. Coding translates logic into syntax, using variables, loops, and functions, compiled with tools like GCC. Testing checks outputs against expected results, while debugging with `printf()` or tools like GDB fixes errors—syntax, logical, or runtime. Logic drives efficiency, breaking problems into manageable parts, as in calculating factorials with recursion. This process, rooted in C’s structured approach, builds problem-solving skills, applicable to real-world applications like embedded systems or software tools, emphasizing clarity and precision in programming.</p>
+            </section>
+        </section>
+    </div>
+</body>
+</html>

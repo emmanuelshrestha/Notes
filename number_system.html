@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Systems and Boolean Logic</title>
+    <link rel="stylesheet" href="global.css">
+    <style>
+        h1 {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <span>CS XI</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="courses.html">Courses</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <h1>Chapter-2 <br>Number Systems and Boolean Logic</h1>
+        <section>
+            <section>
+                <strong>Introduction to Number Systems:</strong>
+                <p>Number systems form the foundation of how data is represented in computers, defining how numbers are expressed using specific bases. The decimal system (base-10), familiar in daily life, uses digits 0-9, while computers rely heavily on the binary system (base-2) with only 0s and 1s, reflecting electronic states of off and on. Other key systems include octal (base-8) and hexadecimal (base-16), which simplify binary representation for human use, using digits 0-7 and 0-9 plus A-F, respectively. Each system serves a purpose: binary for machine-level operations, hexadecimal for concise coding, and decimal for user interaction. Understanding these systems is crucial for computing, as they dictate how numeric data is processed, stored, and converted, bridging human logic with machine functionality effectively.</p>
+            </section>
+            <section>
+                <strong>Binary Number System:</strong>
+                <p>The binary number system, using base-2, is fundamental to digital computing, representing all data with just two digits: 0 and 1. These correspond to electrical signals—off (0) and on (1)—making binary ideal for hardware like transistors and circuits. Each position in a binary number represents a power of 2, so 1011 equals 11 in decimal (8 + 0 + 2 + 1). Computers perform arithmetic and logic operations directly in binary, converting inputs from other systems as needed. Though less intuitive for humans, its simplicity suits machine processing, enabling everything from basic calculations to complex algorithms. Binary’s role extends to memory addressing, data encoding, and communication protocols, forming the backbone of how computers interpret and manipulate information efficiently.</p>
+            </section>
+            <section>
+                <strong>Decimal and Hexadecimal Systems:</strong>
+                <p>The decimal system (base-10) uses digits 0-9 and is the standard for human arithmetic, with place values based on powers of 10, like 345 equaling 300 + 40 + 5. In contrast, the hexadecimal system (base-16) extends to digits 0-9 and letters A-F (representing 10-15), offering a compact way to express binary data. For example, the binary 11101010 becomes EA in hex, simplifying programming and debugging. Hexadecimal is widely used in computing for memory addresses, color codes, and machine-level instructions, while decimal remains key for user interfaces. Conversion between these systems is common, with computers internally using binary but displaying results in decimal or hex, enhancing both usability and technical precision.</p>
+            </section>
+            <section>
+                <strong>Conversion Between Number Systems:</strong>
+                <p>Converting between number systems is essential in computing to translate data across binary, decimal, octal, and hexadecimal formats. To convert binary to decimal, multiply each digit by its positional power of 2 and sum them, like 1101 equals 13 (8 + 4 + 0 + 1). Decimal to binary involves dividing by 2 repeatedly, taking remainders, as 13 becomes 1101. Hexadecimal conversion groups binary digits into sets of four (e.g., 1010 becomes A), while decimal to hex uses division by 16. These processes enable seamless interaction between human-readable formats and machine-level binary, supporting tasks like programming, data analysis, and hardware design. Mastery of conversion ensures accurate data handling across diverse computing applications.</p>
+            </section>
+            <section>
+                <strong>Introduction to Boolean Logic:</strong>
+                <p>Boolean logic, named after George Boole, underpins computer operations by using binary values—true (1) and false (0)—to evaluate conditions. It employs operators like AND, OR, and NOT to manipulate these values, forming the basis of digital circuits and programming. For example, AND requires both inputs to be true for a true output, while OR needs just one. NOT inverts the input. These operations mirror binary arithmetic and are implemented in hardware via logic gates—AND gates, OR gates, and inverters. Boolean logic enables decision-making in algorithms, from simple if-statements to complex processors, translating abstract reasoning into machine-executable instructions. Its simplicity and power make it indispensable in computing and electronics design.</p>
+            </section>
+            <section>
+                <strong>Logic Gates and Truth Tables:</strong>
+                <p>Logic gates are physical devices in circuits that perform Boolean operations, with each gate corresponding to operators like AND, OR, NOT, NAND, NOR, XOR, and XNOR. An AND gate outputs 1 only if both inputs are 1, while an OR gate outputs 1 if at least one input is 1. Truth tables list all possible input combinations and their outputs, such as AND yielding 0 for inputs 0 and 1, but 1 for 1 and 1. These gates, built from transistors, form the building blocks of CPUs and memory units, executing logic at high speeds. Truth tables provide a clear way to predict and design circuit behavior, ensuring reliable computation in everything from calculators to supercomputers.</p>
+            </section>
+            <section>
+                <strong>Boolean Algebra:</strong>
+                <p>Boolean algebra formalizes Boolean logic using mathematical rules to simplify and analyze logical expressions, crucial for designing efficient circuits. It includes laws like the commutative (A AND B = B AND A), associative, and distributive properties, alongside identities like A AND 1 = A. De Morgan’s theorems—transforming (NOT (A AND B)) into (NOT A OR NOT B)—are key for optimization. Variables represent binary states, and operations combine them into expressions computers can process. Engineers use Boolean algebra to reduce complex gate networks, minimizing hardware costs and power use while maintaining functionality. This algebraic approach bridges theoretical logic with practical implementation, enabling the creation of compact, high-performance digital systems integral to modern technology.</p>
+            </section>
+            <section>
+                <strong>Applications of Boolean Logic:</strong>
+                <p>Boolean logic drives numerous applications in computing, from software to hardware design, by enabling binary decision-making. In programming, it powers conditional statements (if-then-else) and loops, controlling program flow based on true/false conditions. In hardware, logic gates built on Boolean principles form processors, memory, and controllers, executing instructions via combinations of AND, OR, and NOT operations. It’s also critical in databases for query processing, like searching with AND/OR conditions, and in network security for access control rules. Beyond computing, Boolean logic appears in everyday tech, like search engines refining results or digital thermostats managing temperature. Its versatility ensures efficient, reliable systems across industries, making it a cornerstone of the digital age.</p>
+            </section>
+        </section>
+    </div>
+</body>
+</html>

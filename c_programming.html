@@ -3,8 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>C Programming</title>
+    <title>C-Programming Language</title>
     <link rel="stylesheet" href="global.css">
+    <style>
+        h1 {
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
     <nav class="navbar">
@@ -19,22 +24,46 @@
         </ul>
     </nav>
 
-    <section>
-        <h1>C Programming</h1>
-        <p>C Programming is one of the most widely used programming languages. It is known for its efficiency, portability, and low-level access to memory.</p>
-
-        <h2>Topics Covered</h2>
-        <ul>
-            <li>Introduction to C</li>
-            <li>Data Types and Variables</li>
-            <li>Operators and Expressions</li>
-            <li>Control Statements</li>
-            <li>Functions</li>
-            <li>Arrays and Strings</li>
-            <li>Pointers</li>
-            <li>Structures and Unions</li>
-            <li>File Handling</li>
-        </ul>
-    </section>
+    <div class="container">
+        <h1>C-Programming Language</h1>
+        <section>
+            <section>
+                <strong>Introduction to C:</strong>
+                <p>C, developed by Dennis Ritchie in 1972, is a high-level, structured programming language foundational to system software like UNIX. A basic program uses `#include <stdio.h>` and `int main() { printf("Hello, World!\n"); return 0; }` to print text. Exams often test this structure—header inclusion, `main()` function, and syntax with semicolons and `\n` for newlines. C’s efficiency and control over hardware make it ideal for OS and embedded systems. Example: `#include <stdio.h> int main() { int x = 5; printf("Value: %d", x); return 0; }` outputs "Value: 5". Understanding this basic setup, including compilation with tools like GCC, is key for beginners and exam questions on output prediction or code correction.</p>
+            </section>
+            <section>
+                <strong>Data Types and Variables:</strong>
+                <p>Data types in C define variable storage—`int` for integers (`int x = 10;`), `float` for decimals (`float y = 3.14;`), `char` for characters (`char c = 'A';`), and `double` for larger floats. Declaration and initialization like `int a = 5, b = 10;` are common. Exams test code like `#include <stdio.h> int main() { int x = 15; float y = 2.5; printf("Int: %d, Float: %.1f", x, y); return 0; }` (outputs "Int: 15, Float: 2.5"). Scope (local: inside functions, global: outside) and size (`int` ≈ 4 bytes) matter. Questions may ask outputs or errors—e.g., uninitialized variables (`int z; printf("%d", z);`) yield garbage values, a frequent trap.</p>
+            </section>
+            <section>
+                <strong>Operators and Expressions:</strong>
+                <p>C operators perform operations—arithmetic (`+`, `-`, `*`, `/`, `%`), relational (`>`, `<`, `==`), and logical (`&&`, `||`, `!`). Expressions combine them, like `int z = 5 + 3 * 2;` (z = 11, due to precedence). Exam code: `#include <stdio.h> int main() { int a = 10, b = 3; printf("Sum: %d, Mod: %d", a+b, a%b); return 0; }` outputs "Sum: 13, Mod: 1". Logical example: `if (a > 5 && b < 4) printf("True");` prints "True". Exams test precedence (`*` before `+`), type casting (`float f = (float)a / b;`), or output prediction—e.g., `printf("%d", 5 > 3);` prints 1 (true). Understanding operator hierarchy and evaluation is critical.</p>
+            </section>
+            <section>
+                <strong>Control Statements:</strong>
+                <p>Control statements direct C program flow. `if-else`: `#include <stdio.h> int main() { int x = 7; if (x > 0) printf("Positive\n"); else printf("Non-positive\n"); return 0; }` outputs "Positive". `switch`: `int n = 2; switch(n) { case 1: printf("One"); break; case 2: printf("Two"); break; default: printf("Other"); }` prints "Two". Loops—`for`: `for(int i=1; i<=3; i++) printf("%d ", i);` prints "1 2 3". Exams ask outputs—e.g., `#include <stdio.h> int main() { int x = 5; if (x > 3 && x < 10) printf("Yes"); return 0; }` (prints "Yes")—or spotting errors like missing `break` in `switch`. Mastery of conditions and loops is essential.</p>
+            </section>
+            <section>
+                <strong>Functions:</strong>
+                <p>Functions in C modularize code—e.g., `int add(int a, int b) { return a + b; }`. Call it: `#include <stdio.h> int main() { int s = add(3, 4); printf("Sum: %d", s); return 0; }` outputs "Sum: 7". Recursion: `int fact(int n) { if (n <= 1) return 1; return n * fact(n-1); }`—`fact(4)` yields 24. Exams test outputs—e.g., `#include <stdio.h> int main() { printf("%d", fact(3)); return 0; }` prints 6—or function definitions. Void functions: `void greet() { printf("Hi\n"); }`. Questions may involve parameter passing (`int x = 5; add(x, 10);`) or return types, emphasizing modularity and logic structuring in C programming.</p>
+            </section>
+            <section>
+                <strong>Arrays and Strings:</strong>
+                <p>Arrays store multiple values—`int arr[4] = {1, 2, 3, 4};`. Access: `printf("%d", arr[1]);` (2). Strings: `char str[] = "C Programming"; printf("%s", str);`. Exam code: `#include <stdio.h> int main() { int a[3] = {5, 10, 15}; for(int i=0; i<3; i++) printf("%d ", a[i]); return 0; }` outputs "5 10 15". String length: `#include <string.h> printf("%d", strlen("test"));` prints 4. Common tasks—sum: `int sum = 0; for(int i=0; i<3; i++) sum += a[i];` (30). Exams may ask outputs, array initialization errors (e.g., `int a[2] = {1, 2, 3};`), or string manipulation with `<string.h>` functions like `strcpy()`.</p>
+            </section>
+            <section>
+                <strong>Pointers:</strong>
+                <p>Pointers store addresses—`int x = 10; int *p = &x; printf("%d", *p);` prints 10. Array pointer: `int a[3] = {1, 2, 3}; int *ptr = a; printf("%d", *(ptr+1));` (2). Exam swap code: `#include <stdio.h> void swap(int *a, int *b) { int t = *a; *a = *b; *b = t; } int main() { int x=5, y=10; swap(&x, &y); printf("%d %d", x, y); return 0; }` outputs "10 5". Pointer arithmetic and dereferencing (`*`) are tested—e.g., `p++; printf("%d", *p);` after initialization. Errors like null pointers (`int *p; *p = 5;`) are common traps in exams.</p>
+            </section>
+            <section>
+                <strong>Structures and Unions:</strong>
+                <p>Structures group data—`struct student { int id; char name[20]; float marks; };`. Usage: `#include <stdio.h> int main() { struct student s = {1, "John", 85.5}; printf("%d %s %.1f", s.id, s.name, s.marks); return 0; }` outputs "1 John 85.5". Unions share memory—`union data { int i; float f; }; union data d; d.i = 10; printf("%d", d.i);`. Exams test declaration and access—e.g., `s.marks = 90.0;`—or differences: structures allocate space for all members, unions for the largest. Code like `#include <stdio.h> struct point { int x, y; }; int main() { struct point p = {3, 4}; printf("%d", p.x); }` (3) is typical.</p>
+            </section>
+            <section>
+                <strong>File Handling:</strong>
+                <p>File handling in C manages data storage—`#include <stdio.h> int main() { FILE *fp = fopen("test.txt", "w"); fprintf(fp, "Hello File"); fclose(fp); return 0; }` writes to "test.txt". Reading: `FILE *fp = fopen("test.txt", "r"); char buf[20]; fscanf(fp, "%s", buf); printf("%s", buf); fclose(fp);` prints "Hello". Modes: "r" (read), "w" (write), "a" (append). Exam code: `#include <stdio.h> int main() { FILE *fp = fopen("data.txt", "w"); int x = 100; fprintf(fp, "%d", x); fclose(fp); return 0; }`. Questions test file operations, error handling (`if (fp == NULL)`), or output prediction, emphasizing persistent data management in C programs.</p>
+            </section>
+        </section>
+    </div>
 </body>
 </html>
