@@ -36,12 +36,14 @@ body {
     color: #FFFFFF; /* White */
     text-decoration: none;
     padding: 10px 15px;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s, box-shadow 0.3s, transform 0.3s;
 }
 
 .nav-links li a:hover {
     background-color: #0EA5E9; /* Teal */
     border-radius: 5px;
+    box-shadow: 0 0 10px rgba(14, 165, 233, 0.7); /* Glowing effect */
+    transform: scale(1.1); /* Pop-up effect */
 }
 
 header {
@@ -103,11 +105,13 @@ section {
     text-decoration: none;
     color: #111827; /* Black */
     font-size: 18px;
+    transition: color 0.3s, box-shadow 0.3s, transform 0.3s;
 }
 
 .courses li a:hover {
     color: #0EA5E9; /* Teal */
-    text-decoration: underline;
+    box-shadow: 0 0 10px rgba(14, 165, 233, 0.7); /* Glowing effect */
+    transform: scale(1.1); /* Pop-up effect */
 }
 
 .course-description {
@@ -168,7 +172,7 @@ a:hover {
 }
 
 a:hover::after {
-    content: " (" attr(href) ")";
+    content: " (" attr() ")";
     font-size: 0.8em;
     color: gray;
 }
