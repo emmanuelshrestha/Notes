@@ -13,6 +13,7 @@ body {
     background-color: #262829; /* Dark Blue */
     padding: 10px 20px;
     width: 100%; /* Make the navbar full width */
+    height: 65px;
     box-sizing: border-box; /* Ensure padding is included in the width */
 }
 
@@ -63,59 +64,17 @@ section {
     line-height: 1.6;
 }
 
-.courses {
-    background: #DEE1E4; /* White */
-    padding: 20px;
-    margin: 20px auto;
-    border-radius: 8px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-    max-width: 1000px; /* Increased max-width to make the boxes wider */
-    text-align: left;
-}
-
-.courses h2 {
-    color: #DEE1E4; /* Dark Blue */
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.courses ol {
-    list-style-type: decimal;
-    margin: 0;
-    padding: 0;
-    counter-reset: course-counter;
-}
-
-.courses li {
-    margin-bottom: 20px;
-    padding: 15px;
-    border-radius: 5px;
-    background-color: #DEE1E4; /* White */
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s;
-    cursor: pointer;
-}
-
-.courses li:hover {
-    transform: scale(1.02);
-}
-
-.courses li a {
+.courses li a{
+    color: #DEE1E4; /* White */
     text-decoration: none;
-    color: #DEE1E4; /* Black */
-    font-size: 18px;
-    transition: color 0.3s, box-shadow 0.3s, transform 0.3s;
+    padding: 10px 15px;
+    transition: background-color 0.3s, box-shadow 0.3s, transform 0.3s;
 }
 
 .courses li a:hover {
-    color: #0EA5E9; /* Teal */
-    box-shadow: 0 0 10px rgba(14, 165, 233, 0.7); /* Glowing effect */
+    color: #6E7073; /* hover color */
+    border-radius: 5px;
     transform: scale(1.1); /* Pop-up effect */
-}
-
-.course-description {
-    margin-top: 10px;
-    color: #DEE1E4;
 }
 
 form {
@@ -179,4 +138,8 @@ a:hover::after {
 
 ol li {
     margin-bottom: 10px;
+}
+
+code{
+    font-size: 15px;
 }

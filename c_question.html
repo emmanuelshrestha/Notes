@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lab Assignment</title>
+    <title>C Programming Questions</title>
     <link rel="stylesheet" href="global.css">
 </head>
 <body>
@@ -20,7 +20,7 @@
     </nav>
     
     <header style="text-align: center;">
-        <h1>Lab Assignment</h1>
+        <h1>C Programming Questions</h1>
     </header>
 
     <section>
@@ -37,13 +37,17 @@ int main() {
     printf("Length of str1: %lu\n", strlen(str1));
     printf("str1 in lowercase: %s\n", strlwr(str1));
     printf("str1 in uppercase: %s\n", strupr(str1));
+
     strcpy(str3, str1);
     printf("str3 after strcpy: %s\n", str3);
+
     if (strcmp(str1, str2) == 0) {
         printf("str1 and str2 are equal.\n");
-    } else {
+    } 
+    else {
         printf("str1 and str2 are not equal.\n");
     }
+
     strcat(str1, str2);
     printf("str1 after strcat: %s\n", str1);
     strncpy(str3, str2, 3);
@@ -63,9 +67,11 @@ int main() {
 #ifdef PI
     #define AREA(r) (PI * SQUARE(r))
 #endif
+
 int main() {
     int radius = 5;
     printf("Area of circle with radius %d: %.2f\n", radius, AREA(radius));
+
     #ifdef PI
         printf("PI is defined.\n");
     #else
@@ -80,15 +86,18 @@ int main() {
         <h2>Tokens in C</h2>
         <pre><code>
 #include &lt;stdio.h&gt;
+
 int main() {
     int num = 10;
     float value = 20.5;
     const int MAX = 100;
     char message[] = "Hello, World!";
     int sum = num + (int)value;
+
     if (sum > MAX) {
         printf("Sum is greater than MAX.\n");
-    } else {
+    } 
+    else {
         printf("Sum is less than or equal to MAX.\n");
     }
     return 0;
@@ -100,18 +109,22 @@ int main() {
         <h2>Input/Output Functions</h2>
         <pre><code>
 #include &lt;stdio.h&gt;
+
 int main() {
     char ch;
     char str[100];
     printf("Enter a number: ");
+
     int num;
     scanf("%d", &num);
     printf("You entered: %d\n", num);
+
     printf("Enter a character: ");
     ch = getchar();
     printf("You entered: ");
     putchar(ch);
     printf("\n");
+
     printf("Enter a string: ");
     gets(str);
     printf("You entered: ");
@@ -125,10 +138,12 @@ int main() {
         <h2>Switch Case and Goto Label</h2>
         <pre><code>
 #include &lt;stdio.h&gt;
+
 int main() {
     int choice;
     printf("Enter a number (1-3): ");
     scanf("%d", &choice);
+
     switch (choice) {
         case 1: printf("You chose 1.\n"); break;
         case 2: printf("You chose 2.\n"); break;
@@ -136,6 +151,7 @@ int main() {
         default: printf("Invalid choice.\n"); goto end;
     }
     printf("This is after the switch statement.\n");
+
 end:
     printf("This is the end of the program.\n");
     return 0;
@@ -147,6 +163,7 @@ end:
         <h2>Patterns</h2>
         <pre><code>
 #include &lt;stdio.h&gt;
+
 int main() {
     int i, j, rows = 5;
     for (i = 0; i < 5; i++) {
@@ -155,18 +172,21 @@ int main() {
         }
         printf("\n");
     }
+
     for (i = 0; i < 4; i++) {
         for (j = 0; j < 8; j++) {
             printf("* ");
         }
         printf("\n");
     }
+
     for (i = 1; i <= rows; i++) {
         for (j = 1; j <= i; j++) {
             printf("* ");
         }
         printf("\n");
     }
+    
     for (i = rows; i >= 1; i--) {
         for (j = 1; j <= i; j++) {
             printf("* ");

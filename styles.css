@@ -1,23 +1,23 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #F3F4F6; /* Light Gray */
+    background-color: #1C1C1D; /* Dark Gray */
     margin: 0;
     padding: 0;
-    color: #111827; /* Black */
+    color: #DEE1E4; /* Light Gray */
 }
 
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #1E3A8A; /* Dark Blue */
+    background-color: #262829; /* Dark Gray */
     padding: 10px 20px;
     width: 100%; /* Make the navbar full width */
     box-sizing: border-box; /* Ensure padding is included in the width */
 }
 
 .logo {
-    color: #FFFFFF; /* White */
+    color: #DEE1E4; /* Light Gray */
     font-size: 24px;
     font-weight: bold;
 }
@@ -33,47 +33,51 @@ body {
 }
 
 .nav-links li a {
-    color: #FFFFFF; /* White */
+    color: #DEE1E4; /* Light Gray */
     text-decoration: none;
     padding: 10px 15px;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s, box-shadow 0.3s, transform 0.3s;
 }
 
 .nav-links li a:hover {
-    background-color: #0EA5E9; /* Teal */
+    background-color: #6E7073; /* Light Hover Color */
     border-radius: 5px;
 }
 
 header {
     margin: 20px;
     text-align: center;
+    color: #DEE1E4;
 }
 
 section {
     margin: 20px auto;
     padding: 40px; /* Increased padding for a larger container */
-    background: #FFFFFF; /* White */
+    background: #262829; /* Dark Gray */
     border-radius: 8px;
-    box-shadow: 0px 0px 10px gray;
+    box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.5);
     max-width: 1200px; /* Increased max-width for a larger container */
+    color: #DEE1E4;
 }
 
 .paragraph {
     line-height: 1.6;
+    color: #DEE1E4;
 }
 
 .courses {
-    background: #FFFFFF; /* White */
+    background: #262829; /* Light Gray */
     padding: 20px;
     margin: 20px auto;
     border-radius: 8px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
     max-width: 1350px; /* Increased max-width to make the boxes wider */
     text-align: left;
+    color: #1C1C1D; /* Dark Gray */
 }
 
 .courses h2 {
-    color: #1E3A8A; /* Dark Blue */
+    color: #DEE1E4; /* Light Gray */
     text-align: center;
     margin-bottom: 20px;
 }
@@ -89,10 +93,11 @@ section {
     margin-bottom: 20px;
     padding: 15px;
     border-radius: 5px;
-    background-color: #FFFFFF; /* White */
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    background-color: #262829; /* Light Gray */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s;
     cursor: pointer;
+    color: #DEE1E4; /* Dark Gray */
 }
 
 .courses li:hover {
@@ -101,7 +106,7 @@ section {
 
 .courses li a {
     text-decoration: none;
-    color: #111827; /* Black */
+    color: #DEE1E4; /* Dark Gray */
     font-size: 18px;
     transition: color 0.3s, box-shadow 0.3s, transform 0.3s;
 }
@@ -113,5 +118,5 @@ section {
 
 .course-description {
     margin-top: 10px;
-    color: #555;
+    color: #DEE1E4; /* Light Gray */
 }
