@@ -1,5 +1,5 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: cursive;
     background-color: #1C1C1D; /* Light Gray */
     margin: 0;
     padding: 0;
@@ -53,7 +53,7 @@ header {
 
 section {
     margin: 20px auto;
-    padding: 40px; /* Increased padding for a larger container */
+    padding: 20px; /* Increased padding for a larger container */
     background: #262829; /* White */
     border-radius: 8px;
     box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.5);
@@ -78,7 +78,7 @@ section {
 }
 
 form {
-    background: #262829; /* White */
+    background: #1C1C1D; /* White */
     margin: 20px 0;
     padding: 20px;
     border-radius: 8px;
@@ -93,10 +93,13 @@ form label {
     display: block;
     font-weight: bold;
     margin: 10px 0 5px;
-    color: #DEE1E4;
+    color: #ccc;
 }
 
 form input, form textarea {
+    font-family: cursive;
+    background-color: #DEE1E4;
+    color:#262829;
     width: 100%;
     padding: 10px;
     margin-bottom: 10px;
@@ -107,7 +110,8 @@ form input, form textarea {
 }
 
 form button {
-    background: #565758; /* Dark Blue */
+    font-family: cursive;
+    background-color: #525253;
     color: #DEE1E4; /* White */
     border: none;
     padding: 10px;
@@ -136,10 +140,23 @@ a:hover::after {
     color: gray;
 }
 
-ol li {
+ol li, .choose li, .info li {
     margin-bottom: 10px;
 }
 
-code{
+pre{
+    background-color: #1C1C1D;
+    color: #DEE1E4;
+    padding: 10px;
+    border-radius: 5px;
+    overflow-x: auto;
     font-size: 15px;
+}
+
+.output {
+    background-color: #262829;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+    font-family: cursive;
 }

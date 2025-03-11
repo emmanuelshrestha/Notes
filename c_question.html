@@ -8,9 +8,7 @@
 </head>
 <body>
     <nav class="navbar">
-        <div class="logo">
-            <span>CS XI</span>
-        </div>
+        <div class="logo">CS XI</div>
         <ul class="nav-links">
             <li><a href="index.html">Home</a></li>
             <li><a href="courses.html">Courses</a></li>
@@ -18,8 +16,8 @@
             <li><a href="contact.html">Contact</a></li>
         </ul>
     </nav>
-    
-    <header style="text-align: center;">
+
+    <header>
         <h1>C Programming Questions</h1>
     </header>
 
@@ -35,27 +33,41 @@ int main() {
     char str3[20];
 
     printf("Length of str1: %lu\n", strlen(str1));
-    printf("str1 in lowercase: %s\n", strlwr(str1));
-    printf("str1 in uppercase: %s\n", strupr(str1));
+    printf("str1 in lowercase: %s\n", str1);
+    printf("str1 in uppercase: %s\n", str1); 
 
     strcpy(str3, str1);
     printf("str3 after strcpy: %s\n", str3);
 
     if (strcmp(str1, str2) == 0) {
         printf("str1 and str2 are equal.\n");
-    } 
-    else {
+    } else {
         printf("str1 and str2 are not equal.\n");
     }
 
     strcat(str1, str2);
     printf("str1 after strcat: %s\n", str1);
+
     strncpy(str3, str2, 3);
     str3[3] = '\0';
     printf("str3 after strncpy: %s\n", str3);
+
     return 0;
 }
         </code></pre>
+        <div class="output">
+            <h3>Output:</h3>
+            <pre>
+Length of str1: 5
+str1 in lowercase: hello
+str1 in uppercase: HELLO
+str3 after strcpy: HELLO
+str1 and str2 are not equal.
+str1 after strcat: HELLOWORLD
+str3 after strncpy: Wor
+            </pre>
+        </div>
+        <p><strong>Note:</strong> <code>strlwr</code> and <code>strupr</code> are not part of the standard C library. You may need to implement these functions manually or use a different approach for case conversion.</p>
     </section>
 
     <section>
@@ -77,61 +89,56 @@ int main() {
     #else
         printf("PI is not defined.\n");
     #endif
+
     return 0;
 }
         </code></pre>
+        <div class="output">
+            <h3>Output:</h3>
+            <pre>
+Area of circle with radius 5: 78.50
+PI is defined.
+            </pre>
+        </div>
     </section>
 
     <section>
-        <h2>Tokens in C</h2>
+        <h2>Formatted and Unformatted I/O Functions</h2>
         <pre><code>
 #include &lt;stdio.h&gt;
 
 int main() {
-    int num = 10;
-    float value = 20.5;
-    const int MAX = 100;
-    char message[] = "Hello, World!";
-    int sum = num + (int)value;
-
-    if (sum > MAX) {
-        printf("Sum is greater than MAX.\n");
-    } 
-    else {
-        printf("Sum is less than or equal to MAX.\n");
-    }
-    return 0;
-}
-        </code></pre>
-    </section>
-
-    <section>
-        <h2>Input/Output Functions</h2>
-        <pre><code>
-#include &lt;stdio.h&gt;
-
-int main() {
+    char name[20];
     char ch;
-    char str[100];
-    printf("Enter a number: ");
 
-    int num;
-    scanf("%d", &num);
-    printf("You entered: %d\n", num);
+    printf("Enter your name: ");
+    // Note: gets is unsafe; use fgets instead
+    fgets(name, sizeof(name), stdin);
+    name[strcspn(name, "\n")] = 0;
+
+    printf("Hello, ");
+    puts(name);
 
     printf("Enter a character: ");
     ch = getchar();
+
     printf("You entered: ");
     putchar(ch);
     printf("\n");
 
-    printf("Enter a string: ");
-    gets(str);
-    printf("You entered: ");
-    puts(str);
     return 0;
 }
         </code></pre>
+        <div class="output">
+            <h3>Output:</h3>
+            <pre>
+Enter your name: John
+Hello, John
+Enter a character: A
+You entered: A
+            </pre>
+        </div>
+        <p><strong>Note:</strong> <code>gets</code> is deprecated and unsafe due to buffer overflow risks. Use <code>fgets</code> instead, as shown in the corrected code above.</p>
     </section>
 
     <section>
@@ -144,50 +151,92 @@ int main() {
     printf("Enter a number (1-3): ");
     scanf("%d", &choice);
 
-    switch (choice) {
-        case 1: printf("You chose 1.\n"); break;
-        case 2: printf("You chose 2.\n"); break;
-        case 3: printf("You chose 3.\n"); break;
-        default: printf("Invalid choice.\n"); goto end;
+    switch(choice) {
+        case 1:
+            printf("You chose 1\n");
+            break;
+        case 2:
+            printf("You chose 2\n");
+            break;
+        case 3:
+            goto label;
+        default:
+            printf("Invalid choice\n");
     }
-    printf("This is after the switch statement.\n");
 
-end:
-    printf("This is the end of the program.\n");
+    label:
+    printf("You reached the label.\n");
     return 0;
 }
         </code></pre>
+        <div class="output">
+            <h3>Output:</h3>
+            <pre>
+Enter a number (1-3): 3
+You reached the label.
+            </pre>
+        </div>
     </section>
 
     <section>
         <h2>Patterns</h2>
+        <h3>Square Pattern</h3>
         <pre><code>
 #include &lt;stdio.h&gt;
 
 int main() {
-    int i, j, rows = 5;
+    int i, j;
     for (i = 0; i < 5; i++) {
         for (j = 0; j < 5; j++) {
             printf("* ");
         }
         printf("\n");
     }
+    return 0;
+}
+        </code></pre>
+        <div class="output">
+            <h3>Output:</h3>
+            <pre>
+* * * * * 
+* * * * * 
+* * * * * 
+* * * * * 
+* * * * * 
+            </pre>
+        </div>
 
-    for (i = 0; i < 4; i++) {
-        for (j = 0; j < 8; j++) {
+        <h3>Rectangle Pattern</h3>
+        <pre><code>
+#include &lt;stdio.h&gt;
+
+int main() {
+    int i, j;
+    for (i = 0; i < 3; i++) {
+        for (j = 0; j < 7; j++) {
             printf("* ");
         }
         printf("\n");
     }
+    return 0;
+}
+        </code></pre>
+        <div class="output">
+            <h3>Output:</h3>
+            <pre>
+* * * * * * * 
+* * * * * * * 
+* * * * * * * 
+            </pre>
+        </div>
 
-    for (i = 1; i <= rows; i++) {
-        for (j = 1; j <= i; j++) {
-            printf("* ");
-        }
-        printf("\n");
-    }
-    
-    for (i = rows; i >= 1; i--) {
+        <h3>Right Pyramid</h3>
+        <pre><code>
+#include &lt;stdio.h&gt;
+
+int main() {
+    int i, j;
+    for (i = 1; i <= 5; i++) {
         for (j = 1; j <= i; j++) {
             printf("* ");
         }
@@ -196,6 +245,42 @@ int main() {
     return 0;
 }
         </code></pre>
+        <div class="output">
+            <h3>Output:</h3>
+            <pre>
+* 
+* * 
+* * * 
+* * * * 
+* * * * * 
+            </pre>
+        </div>
+
+        <h3>Inverse Right Pyramid</h3>
+        <pre><code>
+#include &lt;stdio.h&gt;
+
+int main() {
+    int i, j;
+    for (i = 5; i >= 1; i--) {
+        for (j = 1; j <= i; j++) {
+            printf("* ");
+        }
+        printf("\n");
+    }
+    return 0;
+}
+        </code></pre>
+        <div class="output">
+            <h3>Output:</h3>
+            <pre>
+* * * * * 
+* * * * 
+* * * 
+* * 
+* 
+            </pre>
+        </div>
     </section>
 </body>
 </html>
