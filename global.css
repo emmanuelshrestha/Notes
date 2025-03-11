@@ -144,7 +144,7 @@ ol li, .choose li, .info li {
     margin-bottom: 10px;
 }
 
-pre, code{
+pre{
     background-color: #1C1C1D;
     color: #DEE1E4;
     padding: 10px;
