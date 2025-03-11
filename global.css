@@ -1,23 +1,23 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #F3F4F6; /* Light Gray */
+    background-color: #1C1C1D; /* Light Gray */
     margin: 0;
     padding: 0;
-    color: #111827; /* Black */
+    color: #DEE1E4; /* Black */
 }
 
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #1E3A8A; /* Dark Blue */
+    background-color: #262829; /* Dark Blue */
     padding: 10px 20px;
     width: 100%; /* Make the navbar full width */
     box-sizing: border-box; /* Ensure padding is included in the width */
 }
 
 .logo {
-    color: #FFFFFF; /* White */
+    color: #DEE1E4; /* White */
     font-size: 24px;
     font-weight: bold;
 }
@@ -33,16 +33,15 @@ body {
 }
 
 .nav-links li a {
-    color: #FFFFFF; /* White */
+    color: #DEE1E4; /* White */
     text-decoration: none;
     padding: 10px 15px;
     transition: background-color 0.3s, box-shadow 0.3s, transform 0.3s;
 }
 
 .nav-links li a:hover {
-    background-color: #0EA5E9; /* Teal */
+    background-color: #6E7073; /* New hover color */
     border-radius: 5px;
-    box-shadow: 0 0 10px rgba(14, 165, 233, 0.7); /* Glowing effect */
     transform: scale(1.1); /* Pop-up effect */
 }
 
@@ -54,9 +53,9 @@ header {
 section {
     margin: 20px auto;
     padding: 40px; /* Increased padding for a larger container */
-    background: #FFFFFF; /* White */
+    background: #262829; /* White */
     border-radius: 8px;
-    box-shadow: 0px 0px 10px gray;
+    box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.5);
     max-width: 1200px; /* Increased max-width for a larger container */
 }
 
@@ -65,7 +64,7 @@ section {
 }
 
 .courses {
-    background: #FFFFFF; /* White */
+    background: #DEE1E4; /* White */
     padding: 20px;
     margin: 20px auto;
     border-radius: 8px;
@@ -75,7 +74,7 @@ section {
 }
 
 .courses h2 {
-    color: #1E3A8A; /* Dark Blue */
+    color: #DEE1E4; /* Dark Blue */
     text-align: center;
     margin-bottom: 20px;
 }
@@ -91,7 +90,7 @@ section {
     margin-bottom: 20px;
     padding: 15px;
     border-radius: 5px;
-    background-color: #FFFFFF; /* White */
+    background-color: #DEE1E4; /* White */
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s;
     cursor: pointer;
@@ -103,7 +102,7 @@ section {
 
 .courses li a {
     text-decoration: none;
-    color: #111827; /* Black */
+    color: #DEE1E4; /* Black */
     font-size: 18px;
     transition: color 0.3s, box-shadow 0.3s, transform 0.3s;
 }
@@ -116,16 +115,16 @@ section {
 
 .course-description {
     margin-top: 10px;
-    color: #555;
+    color: #DEE1E4;
 }
 
 form {
-    background: #FFFFFF; /* White */
+    background: #262829; /* White */
+    margin: 20px 0;
     padding: 20px;
-    margin: 20px auto;
     border-radius: 8px;
-    box-shadow: 0px 0px 10px gray;
-    max-width: 600px;
+    box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.5);
+    max-width: 1200px;
     text-align: left;
     width: 100%;
     box-sizing: border-box;
@@ -135,6 +134,7 @@ form label {
     display: block;
     font-weight: bold;
     margin: 10px 0 5px;
+    color: #DEE1E4;
 }
 
 form input, form textarea {
@@ -148,8 +148,8 @@ form input, form textarea {
 }
 
 form button {
-    background: #1E3A8A; /* Dark Blue */
-    color: #FFFFFF; /* White */
+    background: #565758; /* Dark Blue */
+    color: #DEE1E4; /* White */
     border: none;
     padding: 10px;
     cursor: pointer;
@@ -158,12 +158,12 @@ form button {
 }
 
 form button:hover {
-    background-color: #0EA5E9; /* Teal */
+    background-color: #6E7073; /* Teal */
 }
 
 a {
     text-decoration: none;
-    color: #111827; /* Black */
+    color: #DEE1E4; /* Black */
     transition: color 0.3s;
 }
 
@@ -172,7 +172,7 @@ a:hover {
 }
 
 a:hover::after {
-    content: " (" attr() ")";
+    content: " (" attr() ")"; 
     font-size: 0.8em;
     color: gray;
 }
